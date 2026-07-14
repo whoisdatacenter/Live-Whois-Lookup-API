@@ -68,7 +68,7 @@ https://api-v1.whoisdatacenter.com/api/v2/domain/whois/live?domain=yahoo.com&for
 ```
 
 
-## Response
+## Example JSON Response
 
 ```text
 {
