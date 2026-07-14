@@ -25,6 +25,12 @@ curl -X GET "https://api-v1.whoisdatacenter.com/api/v2/domain/whois/live?domain=
   -H "Accept: application/json"
 ```
 
+## Get your Free API key for 10,000 query a month
+https://app.whoisdatacenter.com/sign-up
+
+## For Support
+https://whoisdatacenter.com/contact-us/
+
 ## Authentication
 
 Use your API key as a Bearer token:
