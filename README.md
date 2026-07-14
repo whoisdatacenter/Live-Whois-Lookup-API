@@ -28,8 +28,6 @@ curl -X GET "https://api-v1.whoisdatacenter.com/api/v2/domain/whois/live?domain=
 ## Get your Free API key for 10,000 query a month
 https://app.whoisdatacenter.com/sign-up
 
-## For Support
-https://whoisdatacenter.com/contact-us/
 
 ## Authentication
 
@@ -72,6 +70,10 @@ https://api-v1.whoisdatacenter.com/api/v2/domain/whois/live?domain=yahoo.com&for
 ## Credits
 
 Each Live WHOIS Lookup uses 5 credits.
+
+## For Support
+https://whoisdatacenter.com/contact-us/
+
 
 ## Official Documentation
 
