@@ -1,0 +1,72 @@
+openapi: 3.0.3
+
+info:
+  title: WhoisDataCenter Live WHOIS Lookup API
+  version: 2.0.0
+  description: >
+    Get fresh WHOIS data directly from the registry in real time.
+
+  contact:
+    name: WhoisDataCenter
+    url: https://whoisdatacenter.com
+
+servers:
+  - url: https://api-v1.whoisdatacenter.com/api/v2
+    description: Production API server
+
+paths:
+  /domain/whois/live:
+    get:
+      summary: Live WHOIS Lookup
+      description: Fetches fresh WHOIS data directly from the registry in real time.
+      operationId: liveWhoisLookup
+
+      security:
+        - bearerAuth: []
+
+      parameters:
+        - name: domain
+          in: query
+          required: true
+          description: Domain name to look up.
+          schema:
+            type: string
+          example: yahoo.com
+
+        - name: format
+          in: query
+          required: false
+          description: Response format. Defaults to json.
+          schema:
+            type: string
+            enum:
+              - json
+              - xml
+              - csv
+            default: json
+
+      responses:
+        '200':
+          description: Live WHOIS data returned successfully.
+
+        '400':
+          description: Invalid or missing domain parameter.
+
+        '401':
+          description: Invalid or missing API key.
+
+        '429':
+          description: Rate limit exceeded.
+
+        '500':
+          description: Internal server error.
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: API Key
+
+security:
+  - bearerAuth: []
